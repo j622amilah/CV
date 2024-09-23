@@ -180,7 +180,7 @@ a:hover { border-color: transparent; }
 	-webkit-transform: translate3d(0,0,0);
 	-ms-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-	background: #215423 url("images/bg_resized1500by500.png") top left;
+	background: #215423 url("bg_resized1500by500.png") top left;
 	background-repeat: repeat-x;
 	height: 100%;
 	left: 0;
@@ -298,7 +298,7 @@ a:hover { border-color: transparent; }
 	-ms-animation: overlay 1.5s 1.5s forwards;
 	animation: overlay 1.5s 1.5s forwards;
 	background-attachment: fixed, fixed;
-	background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
+	background-image: url("overlay-pattern.png"), url("overlay.svg");
 	background-position: top left, center center;
 	background-repeat: repeat, no-repeat;
 	background-size: auto, cover;
