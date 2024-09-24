@@ -9,15 +9,10 @@
 <link rel="stylesheet" href="main.css"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
 
-<div align="left">
-<table style='text-align: left; width: 500px; display:block'>
-<tr id="top_row">
 <div id="wrapper">
 	<div id="bg"></div>
 	<div id="overlay"></div>
 	<div id="main">
-
-		<!-- Header -->
 		<header id="header">
 			<h1>Jamilah FOUCHER</h1>
 			<p style="color: #000000; font-weight: bold;">Data Scientist (Azure Associate 2023-2024) with Deep Learning, MLOps, and FrontEnd developer certified skills. <br>Welcome to my personal Data Science webpage!</p>
@@ -34,35 +29,15 @@
 		</header>
 	</div>
 </div>
-</tr>
-<tr id="pdf_viewer_output">
-</tr>
-</table>
-</div>
+
 		
 <script>
 	window.onload = function() { document.body.classList.remove('is-preload'); }
 	window.ontouchmove = function() { return false; }
 	window.onorientationchange = function() { document.body.scrollTop = 0; }
-
-	// document.querySelector('.fas fa-file-pdf').addEventListener('click', processEvent, false);
-	// async function processEvent(event) {
+	
 	async function processEvent() {
-		try {
-			// without CORS: name of file
-			var file_download_url = "https://raw.githubusercontent.com/j622amilah/CV/main/linkedin_equivalent_CV.pdf";
-			var file_download_url_name = file_download_url.split('/').pop();
-			console.log("file_download_name: ", file_download_url_name);
-			var objectElement = document.createElement('object');
-			objectElement.setAttribute("id", "pdf_object_element");
-			objectElement.setAttribute("type", "application/pdf");
-			objectElement.setAttribute("width", 800);
-			objectElement.setAttribute("height", 1200);
-			objectElement.setAttribute("data", file_download_url_name);
-			document.getElementById('pdf_viewer_output').appendChild(objectElement);
-		  } catch (error){
-		    document.getElementById("error").innerText = error;
-		  }
+		winRef = window.open("https://j622amilah.github.io/CV/view_cv.html", "winRef", target="width=800,height=1200");
 	}
 </script>
 		
