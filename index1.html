@@ -24,7 +24,7 @@
 							<li><a href="https://github.com/CodeSolutions2" class="fab fa-github"><span class="label"></span></a></li>
 							<li><a href="https://medium.com/@j622amilah/" class="fab fa-medium"><span class="label"></span></a></li>
 							<li><a href="https://dev.to/practicing_datscy" class="fab fa-dev"><span class="label"></span></a></li>
-							<li><a href="#" class="fas fa-file-pdf"><span class="label"></span></div></li>
+							<li><a href="#" onclick="processEvent();" class="fas fa-file-pdf"><span class="label"></span></div></li>
 						</ul>
 					</nav>
 				</header>
@@ -36,8 +36,9 @@
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
 
-    			document.querySelector('.fas fa-file-pdf').addEventListener('click', function() {
-
+    			// document.querySelector('.fas fa-file-pdf').addEventListener('click', processEvent, false);
+			// async function processEvent(event) {
+			async function processEvent() {
 				try {
 			  		// without CORS: name of file
 					var file_download_url = "https://raw.githubusercontent.com/j622amilah/CV/main/linkedin_equivalent_CV.pdf";
@@ -55,9 +56,7 @@
 				  } catch (error){
 				    document.getElementById("error").innerText = error;
 				  }
-		        
-		    });
-      
+			}
 		</script>
 		
 	</body>
