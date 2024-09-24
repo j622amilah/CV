@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head></head>
+<body>
+
+<!-- ---------------------------------------- -->
+<div align="left">
+<table style='text-align: left; width: 500px; display:block'>
+<tr id="pdf_viewer_output">
+</tr>
+</table>
+</div>  
+<!-- ---------------------------------------- -->
+
+<!-- ---------------------------------------- -->
+<!-- CSS -->
+<style>
+div { padding: 10px; display:block; font-family:courier; font-size:15px; height:300px; }
+	
+table {vertical-align: top; border-collapse: collapse; position: relative; z-index: 0; border: 0px solid black;}
+
+tr {vertical-align: top; border: 0px solid black; padding: 30px 30px; }
+
+th, td {vertical-align: top; border: 0px solid black; padding: 10px; }
+th#pdf_viewer_output {width: 100%; }
+
+object#pdf_object_element {position: absolute; vertical-align: top; top: 200; z-index: 200; }
+</style>
+<!-- ---------------------------------------- -->
+
+
+<script>
+
+// -----------------------------------------------
+	
+window.addEventListener('beforeunload', function() {
+	window.location.href = window.location.href + '?nocache=' + new Date().getTime();
+  load_CV();
+});
+
+// -----------------------------------------------
+
+
+function load_CV() {
+		try {
+			// without CORS: name of file
+			var file_download_url = "https://raw.githubusercontent.com/j622amilah/CV/main/linkedin_equivalent_CV.pdf";
+			var file_download_url_name = file_download_url.split('/').pop();
+			console.log("file_download_name: ", file_download_url_name);
+			var objectElement = document.createElement('object');
+			objectElement.setAttribute("id", "pdf_object_element");
+			objectElement.setAttribute("type", "application/pdf");
+			objectElement.setAttribute("width", 800);
+			objectElement.setAttribute("height", 1200);
+			objectElement.setAttribute("data", file_download_url_name);
+			document.getElementById('pdf_viewer_output').appendChild(objectElement);
+		  } catch (error){
+		    document.getElementById("error").innerText = error;
+		  }
+	}
+
+</script>
+		
+</body>
+</html>
