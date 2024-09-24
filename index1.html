@@ -1,61 +1,70 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>CV: Jamilah FOUCHER</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-		<link rel="stylesheet" href="main.css"/>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+<head></head>
+<body class="is-preload">
 
-				<!-- Header -->
-				<header id="header">
-					<h1>Jamilah FOUCHER</h1>
-					<p style="color: #000000; font-weight: bold;">Data Scientist (Azure Associate 2023-2024) with Deep Learning, MLOps, and FrontEnd developer certified skills. <br>Welcome to my personal Data Science webpage!</p>
-					<nav>
-						<ul>
-							<li><a href="https://www.linkedin.com/in/jamilah-foucher/" class="fab fa-linkedin"><span class="label"></span></a></li>
-							<li><a href="https://www.upwork.com/freelancers/~01fa1853d9b44de667?viewMode=1" class="fab fa-upwork"><span class="label"></span></a></li>
-							<li><a href="https://github.com/CodeSolutions2" class="fab fa-github"><span class="label"></span></a></li>
-							<li><a href="https://medium.com/@j622amilah/" class="fab fa-medium"><span class="label"></span></a></li>
-							<li><a href="https://dev.to/practicing_datscy" class="fab fa-dev"><span class="label"></span></a></li>
-							<li><a href="#" onclick="processEvent();" class="fas fa-file-pdf"><span class="label"></span></div></li>
-						</ul>
-					</nav>
-				</header>
-			</div>
-		</div>
-		<div id="pdf_viewer_output"></div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
+<title>CV: Jamilah FOUCHER</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<link rel="stylesheet" href="main.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
 
-    			// document.querySelector('.fas fa-file-pdf').addEventListener('click', processEvent, false);
-			// async function processEvent(event) {
-			async function processEvent() {
-				try {
-			  		// without CORS: name of file
-					var file_download_url = "https://raw.githubusercontent.com/j622amilah/CV/main/linkedin_equivalent_CV.pdf";
-			  		var file_download_url_name = file_download_url.split('/').pop();
-			  		console.log("file_download_name: ", file_download_url_name);
-			  		var objectElement = document.createElement('object');
-				  	objectElement.setAttribute("id", "pdf_object_element");
-				  	objectElement.setAttribute("type", "application/pdf");
-				  	objectElement.setAttribute("width", 800);
-				  	objectElement.setAttribute("height", 1200);
-				  	objectElement.setAttribute("data", file_download_url_name);
-				  	document.getElementById('pdf_viewer_output').appendChild(objectElement);
-				  } catch (error){
-				    document.getElementById("error").innerText = error;
-				  }
-			}
-		</script>
+<div align="left">
+<table style='text-align: left; width: 500px; display:block'>
+<tr id="top_row">
+<div id="wrapper">
+	<div id="bg"></div>
+	<div id="overlay"></div>
+	<div id="main">
+
+		<!-- Header -->
+		<header id="header">
+			<h1>Jamilah FOUCHER</h1>
+			<p style="color: #000000; font-weight: bold;">Data Scientist (Azure Associate 2023-2024) with Deep Learning, MLOps, and FrontEnd developer certified skills. <br>Welcome to my personal Data Science webpage!</p>
+			<nav>
+				<ul>
+					<li><a href="https://www.linkedin.com/in/jamilah-foucher/" class="fab fa-linkedin"><span class="label"></span></a></li>
+					<li><a href="https://www.upwork.com/freelancers/~01fa1853d9b44de667?viewMode=1" class="fab fa-upwork"><span class="label"></span></a></li>
+					<li><a href="https://github.com/CodeSolutions2" class="fab fa-github"><span class="label"></span></a></li>
+					<li><a href="https://medium.com/@j622amilah/" class="fab fa-medium"><span class="label"></span></a></li>
+					<li><a href="https://dev.to/practicing_datscy" class="fab fa-dev"><span class="label"></span></a></li>
+					<li><a href="#" onclick="processEvent();" class="fas fa-file-pdf"><span class="label"></span></div></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+</div>
+</tr>
+<tr id="pdf_viewer_output">
+</tr>
+</table>
+</div>
 		
-	</body>
+<script>
+	window.onload = function() { document.body.classList.remove('is-preload'); }
+	window.ontouchmove = function() { return false; }
+	window.onorientationchange = function() { document.body.scrollTop = 0; }
+
+	// document.querySelector('.fas fa-file-pdf').addEventListener('click', processEvent, false);
+	// async function processEvent(event) {
+	async function processEvent() {
+		try {
+			// without CORS: name of file
+			var file_download_url = "https://raw.githubusercontent.com/j622amilah/CV/main/linkedin_equivalent_CV.pdf";
+			var file_download_url_name = file_download_url.split('/').pop();
+			console.log("file_download_name: ", file_download_url_name);
+			var objectElement = document.createElement('object');
+			objectElement.setAttribute("id", "pdf_object_element");
+			objectElement.setAttribute("type", "application/pdf");
+			objectElement.setAttribute("width", 800);
+			objectElement.setAttribute("height", 1200);
+			objectElement.setAttribute("data", file_download_url_name);
+			document.getElementById('pdf_viewer_output').appendChild(objectElement);
+		  } catch (error){
+		    document.getElementById("error").innerText = error;
+		  }
+	}
+</script>
+		
+</body>
 </html>
